@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="@cd833f87-bcaa-4942-8497-a811970585cf" ViewId="GorevOlustur_ListView" />
+    </Items>
+  </NavigationItems>
+</Application>

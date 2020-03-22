@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Personel_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AdSoyad" Width="109" Index="2" />
+      </Columns>
+    </ListView>
+    <ListView Id="Personel_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AdSoyad" Index="2" Width="126" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Personel_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Personel">
+              <LayoutGroup Id="Personel_col1">
+                <LayoutItem Id="AdSoyad" RelativeSize="85.31073446327683" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

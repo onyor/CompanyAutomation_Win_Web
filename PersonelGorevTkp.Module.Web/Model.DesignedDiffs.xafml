@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="PersonelGorevTkp.Module.BusinessObjects.GorevOlustur">
+      <AppearanceRules>
+        <AppearanceRule Id="IslemeAlindi" BackColor="255, 255, 128" TargetItems="Durum" Criteria="[Durum] = ##Enum#PersonelGorevTkp.Module.EnumObjects.ProjeDurumType,islemeAlindi#" AppearanceItemType="ViewItem" Context="ListView" IsNewNode="True" />
+        <AppearanceRule Id="Kırımızı Alan" Criteria="[BitirmeTarihi] &gt; [PlanlananBitirmeTarihi]" BackColor="Red" />
+        <AppearanceRule Id="Yeşil Alan" BackColor="Lime" TargetItems="Durum" Criteria="[BitirmeTarihi] &lt; [PlanlananBitirmeTarihi]" Context="ListView" IsNewNode="True" />
+      </AppearanceRules>
+    </Class>
+    <Class Name="PersonelGorevTkp.Module.BusinessObjects.Personel" ImageName="BO_Department" />
+    <Class Name="PersonelGorevTkp.Module.BusinessObjects.Pozisyon" ImageName="BO_Position_v92" />
+    <Class Name="PersonelGorevTkp.Module.BusinessObjects.Projelers" ImageName="palette" />
+  </BOModel>
+  <NavigationItems NavigationStyle="Accordion" ShowImages="True" DefaultChildItemsDisplayStyle="List" StartupNavigationItem="">
+    <Items>
+      <Item Id="@cd833f87-bcaa-4942-8497-a811970585cf" ImageName="ChartType_AreaStacked" />
+      <Item Id="Reports" Caption="Toplantı / Döküman">
+        <Items>
+          <Item Id="Toplanti_ListView" ViewId="Toplanti_ListView" ImageName="Business_Briefcase" ObjectKey="" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options CollectionsEditMode="Edit" />
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="18.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerAspNetModule" Version="18.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="18.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemAspNetModule" Version="18.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="18.2.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <ViewItems>
+    <PropertyEditor Name="PropertyEditors">
+      <RegisteredPropertyEditor PropertyType="System.Drawing.Color" EditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxColorPickerPropertyEditor" />
+    </PropertyEditor>
+  </ViewItems>
+  <Views>
+    <ListView Id="GorevOlustur_ListView_AtanmayanGorevler">
+      <HiddenActions>
+        <ActionLink ActionId="Cancel" IsNewNode="True" />
+        <ActionLink ActionId="Delete" IsNewNode="True" />
+        <ActionLink ActionId="Edit" IsNewNode="True" />
+        <ActionLink ActionId="New" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <ListView Id="GorevOlustur_ListView_BanaAtananGörevler" Criteria="[Alan.Kullanici.Oid] = CurrentUserId() And [Durum] = ##Enum#PersonelGorevTkp.Module.EnumObjects.ProjeDurumType,islemeAlindi# And [Durum] = ##Enum#PersonelGorevTkp.Module.EnumObjects.ProjeDurumType,atandi# And [Durum] = ##Enum#PersonelGorevTkp.Module.EnumObjects.ProjeDurumType,tamamlandi#">
+      <HiddenActions>
+        <ActionLink ActionId="Cancel" IsNewNode="True" />
+        <ActionLink ActionId="Delete" IsNewNode="True" />
+        <ActionLink ActionId="Edit" IsNewNode="True" />
+        <ActionLink ActionId="New" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+  </Views>
+</Application>

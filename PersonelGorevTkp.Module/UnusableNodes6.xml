@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="GorevOlustur_ListView_AtanmayanGorevler">
+      <Filters Id="Filters" CurrentFilterId="Atanmış Görevler" />
+    </ListView>
+  </Views>
+</Application>

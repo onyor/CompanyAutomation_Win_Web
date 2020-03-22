@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="PersonelGorevTkp.Module.BusinessObjects.GenelSirketMasraflari">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Kod" AllowEdit="False" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="GenelSirketMasraflari_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="6.2295081967213113" Direction="Horizontal" Removed="True">
+            <LayoutGroup Id="GenelSirketMasraflari" Caption="Kod" Direction="Horizontal" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Kod" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

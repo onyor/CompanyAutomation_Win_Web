@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="GorevOlustur_ListView_BanaAtananGörevler">
+      <HiddenActions Id="HiddenActions">
+        <ActionLink ActionId="@1d12867e-1a41-4249-a23b-42942a7af951" Removed="True" />
+      </HiddenActions>
+    </ListView>
+  </Views>
+</Application>
